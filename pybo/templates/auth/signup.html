@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">계정생성</h5>
+    <form method="post">
+        {{ form.csrf_token }}
+        {{ form.username.label }}
+        {{ form.username(class='form-control') }}
+
+        {{ form.password1.label }}
+        {{ form.password1(class='form-control') }}
+
+        {{ form.password2.label }}
+        {{ form.password2(class='form-control') }}
+
+        {{ form.email.label }}
+        {{ form.email(class='form-control') }}
+
+        <button type="submit" class="btn btn-primary">회원가입</button>
+    </form>
+
+</div>
+
+{% endblock %}
